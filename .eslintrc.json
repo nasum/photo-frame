@@ -30,7 +30,7 @@
     ],
     "semi": [
       "error",
-      "always"
+      "never"
     ],
     "camelcase": [
       "error",
@@ -43,6 +43,10 @@
       {
         "allow": ["log"]
       }
+    ],
+    "no-multi-spaces": [
+      "error",
+      { "exceptions": { "ImportDeclaration": true } }
     ]
   },
   "globals": {
