@@ -2,12 +2,32 @@
   <div class="window">
     <header class="toolbar toolbar-header" style="-webkit-app-region: drag;">
       <h1 class="title">PhotoFrame</h1>
+      <div class="toolbar-actions">
+        <div class="btn-group">
+          <button class="btn btn-default">
+            <span class="icon icon-home"></span>
+          </button>
+          <button class="btn btn-default">
+            <span class="icon icon-folder"></span>
+          </button>
+        </div>
+        <button class="btn btn-default">
+          <span class="icon icon-play icon-text"></span>
+          Start
+        </button>
+        <button class="btn btn-default">
+          <span class="icon icon-shuffle"></span>
+        </button>
+      </div>
     </header>
     <div class="window-content">
       <div class="pane-group">
         <div class="pane-sm sidebar">
           <nav class="nav-group">
-            <h5 class="nav-group-title">Favorites</h5>
+            <h5 class="nav-group-title">Folders</h5>
+            <a class="nav-group-item active">
+              all
+            </a>
           </nav>
         </div>
         <div class="pane">
