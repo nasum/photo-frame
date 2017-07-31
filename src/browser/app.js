@@ -1,9 +1,13 @@
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
+const Dialog = electron.dialog
+const IpcMain = electron.ipcMain
 
-const path = require('path')
-const url = require('url')
+import path from 'path'
+import url from 'url'
+
+//import storage from 'electron-json-storage'
 
 let mainWindow
 
@@ -39,4 +43,16 @@ app.on('activate', function () {
   if (mainWindow === null) {
     createWindow()
   }
+})
+
+IpcMain.on('OPEN_DIRCTORY_DIALOG', () => {
+  Dialog.showOpenDialog({
+    properties: ['openFile', 'openDirectory', 'multiSelections'],
+    filters: [
+      {name: 'Images', extensions: ['jpg', 'png', 'gif']}
+    ]
+  },
+  (filePaths) => {
+    console.log(filePaths)
+  })
 })

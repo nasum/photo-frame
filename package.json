@@ -36,6 +36,7 @@
     "webpack": "^3.4.1"
   },
   "dependencies": {
+    "electron-json-storage": "^3.0.7",
     "vue": "^2.4.2",
     "vuex": "^2.3.1"
   }

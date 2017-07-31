@@ -6,7 +6,7 @@
         <button class="btn btn-default">
           <span class="icon icon-home"></span>
         </button>
-        <button class="btn btn-default">
+        <button class="btn btn-default" @click='openDirectoryDialog'>
           <span class="icon icon-folder"></span>
         </button>
       </div>
@@ -22,8 +22,15 @@
 </template>
 
 <script>
+  import { ipcRenderer } from 'electron';
+
   export default {
-    name: 'Header'
+    name: 'Header',
+    methods: {
+      openDirectoryDialog: function () {
+        ipcRenderer.send('OPEN_DIRCTORY_DIALOG')
+      }
+    }
   }
 </script>
 
